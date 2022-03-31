@@ -22,6 +22,16 @@ public class TestaBanco {
 //		System.out.println("Nome: "+ pessoaCConstrutor.getNome());
 //		System.out.println("CPF: "+ pessoaCConstrutor.getCpf());
 //		
+		
+		PessoaFisica pfCarla = new PessoaFisica();
+		pfCarla.setNome("Carla Barros");
+		pfCarla.setEmail("carlabarrositb@hotmail.com");
+		pfCarla.setTelefone("3515158231353");
+		pfCarla.setCpf("681.863.910-02");
+		pfCarla.setProfissao("Programadora");
+		pfCarla.setRg("48.044.360-9");
+		
+		
 		Conta conta1 = new Conta();
 		conta1.setAgencia(1234);
 		conta1.setNumeroConta(7889);
@@ -42,16 +52,27 @@ public class TestaBanco {
 //			System.out.println("ERRO! Verifique o valor");
 //		}
 //		
-		Conta conta2 = new Conta();
+//		Conta conta2 = new Conta();
+//		
+//		conta2.setAgencia(5582);
+//		conta2.setNumeroConta(2234);
+//
+//
+//		conta1.transferir(900, conta2);
+//		
+//		System.out.println("Saldo conta 1: "+ conta1.getSaldo());
+//		System.out.println("Saldo conta 2: "+ conta2.getSaldo());
 		
-		conta2.setAgencia(5582);
-		conta2.setNumeroConta(2234);
-
-
-		conta1.transferir(900, conta2);
+		ContaCorrente cc1 = new ContaCorrente();
+		cc1.depositar(1000);
+		System.out.println("Saldo: "+ cc1.getSaldo());
+		System.out.println("Limite: "+ cc1.getLimite());
+		System.out.println("Saldo com Limite: "+ cc1.getSaldoComLimite());
 		
-		System.out.println("Saldo conta 1: "+ conta1.getSaldo());
-		System.out.println("Saldo conta 2: "+ conta2.getSaldo());
+		cc1.sacar(1500);
+		System.out.println("Saldo: "+ cc1.getSaldo());
+		System.out.println("Saldo com Limite: "+ cc1.getSaldoComLimite());
+		
 		
 	}
 }

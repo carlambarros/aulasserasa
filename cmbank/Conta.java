@@ -6,9 +6,8 @@ public class Conta {
 	
 	private int agencia;
 	private int numeroConta;
-	private double saldo;
+	protected double saldo;
 	private String titular;
-	
 	
 	
 	// método construtor padrão (default)
